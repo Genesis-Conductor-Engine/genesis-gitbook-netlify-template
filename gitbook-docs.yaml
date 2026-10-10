@@ -1,0 +1,36 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: "{{PROJECT_TITLE}}"
+  structure:
+    - type: section
+      key: section-docs
+      title: Documentation
+      path: docs
+      default: true
+      children:
+        - type: space
+          key: space-guides
+          title: Guides
+          path: guides
+          default: true
+          content:
+            directory: ./docs/guides
+        - type: space
+          key: space-reference
+          title: Reference
+          path: reference
+          content:
+            directory: ./docs/reference
+    - type: section
+      key: section-skills
+      title: Skills
+      path: skills
+      children:
+        - type: space
+          key: space-skills
+          title: Skills
+          path: skills
+          default: true
+          content:
+            directory: ./skills

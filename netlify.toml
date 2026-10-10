@@ -1,0 +1,18 @@
+# Agentic Netlify configuration for continuous deployment and Agent Runners / MCP readiness
+# Compatible with Netlify MCP Server and agent skills (npx skills add netlify/context-and-tools)
+
+[build]
+  command = "echo 'No build required for static docs or configure as needed'"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Optional: enable for functions if used
+# [functions]
+#   directory = "netlify/functions"
